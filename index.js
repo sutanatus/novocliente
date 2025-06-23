@@ -9,10 +9,9 @@ const cors = require('cors');
 const authRoutes = require('./routes/authRoutes.js');
 const userRoutes = require('./routes/userRoutes.js');
 const adminRoutes = require('./routes/adminRoutes.js');
-const subjectRoutes = require('./routes/subjectRoutes.js.js');
+const subjectRoutes = require('./routes/subjectRoutes.js');
 const deckRoutes = require('./routes/deckRoutes.js');
 const flashcardRoutes = require('./routes/flashcardRoutes.js');
-
 
 // Cria a aplicação Express
 const app = express();
@@ -32,8 +31,7 @@ app.use('/api/subjects', subjectRoutes);
 app.use('/api/decks', deckRoutes);
 app.use('/api/flashcards', flashcardRoutes);
 
-
-// Uma rota de "saida" para verificar rapidamente se o servidor está no ar
+// Uma rota de "saúde" para verificar rapidamente se o servidor está no ar
 app.get('/', (req, res) => {
   res.send('API do Flashcards PF está funcionando!');
 });
